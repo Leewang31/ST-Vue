@@ -16,5 +16,6 @@ export default {
   padding: 10px;
   margin: 10px;
   border-radius: 5px;
+  color: #545454;
 }
 </style>

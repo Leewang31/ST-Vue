@@ -21,6 +21,16 @@ export default {
       month: 1
     }
   },
+  watch:{
+    month(a){
+      if(a>12){
+        alert('13개월 이상은 계약이 어려워요!')
+        this.month = 1
+      }
+    }
+  },
+  updated() {
+  },
   props: {
     modalIsOpen: Boolean,
     products: Array,
@@ -30,6 +40,9 @@ export default {
 </script>
 
 <style scoped>
+.room-img{
+  width: 80%;
+}
 .black-bg {
   width: 100%;
   height: 100%;
@@ -40,7 +53,7 @@ export default {
 
 .white-bg {
   width: 100%;
-  background: white;
+  background: gray;
   border-radius: 8px;
   padding: 20px;
 }
