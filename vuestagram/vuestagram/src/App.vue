@@ -35,7 +35,7 @@ export default {
     return {
       postDummy,
       axiosCount: 0,
-      step: 0,
+      step: 3,
       imgUrl: '',
       myPost: {},
     }

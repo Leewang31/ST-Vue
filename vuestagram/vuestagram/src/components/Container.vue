@@ -18,11 +18,17 @@
       <textarea class="write-box" @input="$emit('wrtiePost',{content:$event.target.value,filter:selectFilter})"/>
     </div>
   </div>
+
+  <div v-else-if="step===3">
+    <Mypage>
+    </Mypage>
+  </div>
 </template>
 
 <script>
 import Post from "@/components/Post";
 import FilterBox from "@/components/FilterBox";
+import Mypage from "@/components/Mypage";
 
 export default {
   name: "Container",
@@ -38,6 +44,7 @@ export default {
   components: {
     FilterBox,
     Post,
+    Mypage,
   },
   props: {
     postDummy: Array,
